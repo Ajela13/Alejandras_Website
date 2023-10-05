@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfico Plotly en Django</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+       .plotly-graph {
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="plotly-graph">{{ plot_div|safe }}</div>
+</body>
+</html>
