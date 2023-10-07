@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ViolenciaProyect.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Domestic_violence_dane',
+        'USER': 'postgres',
+        'PASSWORD': 'alejaweb1000',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
