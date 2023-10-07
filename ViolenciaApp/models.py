@@ -12,3 +12,4 @@ class Dane(models.Model):
     GRUPO_ETARIO=models.CharField(max_length=100)
     CANTIDAD=models.IntegerField()
     
+
