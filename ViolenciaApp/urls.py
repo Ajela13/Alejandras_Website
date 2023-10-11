@@ -5,6 +5,5 @@ from . import views
 urlpatterns=[
     path('', views.myWebsite),
     path('plotly-example/', views.plotly_example, name='plotly_example'),
-    path('map/', views.map, name='map'),
 
 ]
