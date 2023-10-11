@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
 });
 
 
-//---
+
 document.addEventListener("DOMContentLoaded", function () {
     const imageButtons = document.querySelectorAll(".btn.btn-outline-secondary");
     const scrollContent = document.querySelector(".scroll-content");
