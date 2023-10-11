@@ -13,3 +13,8 @@ class Dane(models.Model):
     CANTIDAD=models.IntegerField()
     
 
+class Geojason(models.Model):
+    type=models.CharField(max_length=255)
+    crs=models.JSONField()
+    features=models.JSONField()
+

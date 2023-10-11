@@ -13,6 +13,7 @@ import plotly.graph_objects as go
 from plotly.offline import plot
 from . import views
 from ViolenciaApp.models import Dane
+from ViolenciaApp.models import Geojason
 
 
 
@@ -90,15 +91,18 @@ def plotly_example(request):
 
 def map2(request):
 
-    with urlopen('https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json') as response:
-        colombia = json.load(response)
-
     registros = Dane.objects.all()
     df = pd.DataFrame(list(registros.values()))
     df=df.replace('GUAJIRA','LA GUAJIRA')
     df=df.replace('VALLE','VALLE DEL CAUCA')
     df=df. drop(df.index[df['DEPARTAMENTO'] == 'NO REPORTA'])
     
+    col_data = Geojason.objects.all()[0]
+    colombia=col_data = {
+            'type': col_data.type,
+            'crs': col_data.crs,
+            'features': col_data.features,
+        }
     colombia_dep_map={}
     for feature in colombia['features']:
         feature['id']=feature['properties']['DPTO']
