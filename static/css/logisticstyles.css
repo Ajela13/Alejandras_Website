@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)),url('/static/images/bg.jpg') ;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .navbar{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    background: linear-gradient(to top, rgba(8, 9, 10, 0.5), rgba(0, 0, 0, 0.5)) ;
+    width: 100%;
+    height: 15vh;
+  }
+
+  
