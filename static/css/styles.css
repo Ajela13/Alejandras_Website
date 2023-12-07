@@ -28,10 +28,10 @@ body, html {
   }
   
   .content {
-    align-items: center;
+    
+align-items: center;
     justify-content: center;
     display: flex;
-
     flex-direction: column;
     top: 0;
     left: 0;
