@@ -21,11 +21,39 @@
         <div class="shadow">
             <div id="home" class="content"> 
                 <div class="uiButtons">
-                    <button  id="homeButton" onclick="scrollToSection('home')" type="button" class="btn btn-outline-light" >Home</button>
-                    <button onclick="scrollToSection('about')" type="button" class="btn btn-outline-light">About</button>
-                    <button onclick="scrollToSection('portafolio')" type="button" class="btn btn-outline-light">Portafolio</button>
-                    <button onclick="scrollToSection('contact')" type="button" class="btn btn-outline-light">Contact</button>
-                </div>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="homeButton" onclick="scrollToSection('home')" aria-current="page" href="#" style="color: aliceblue;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="scrollToSection('about')"  href="#" style="color: aliceblue;">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" onclick="scrollToSection('portafolio')" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: aliceblue;">Portagolio</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Machine Learning</a>
+                                <li><a class="dropdown-item" href="{% url 'logistic_regression' %}">Logistic Regression</a></li>
+                                <li><a class="dropdown-item" href="#">K-nearest neighbors</a></li>
+                                <li><a class="dropdown-item" href="#">K means clustering</a></li>
+                                <li><a class="dropdown-item" href="#">Decision trees</a></li>
+                                <li><a class="dropdown-item" href="#">Random forest</a></li>
+                                <li><a class="dropdown-item" href="#">Ada boost</a></li>
+                                <li><a class="dropdown-item" href="#">Rifge and lasso regression</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Artificial Intelligence</a>
+                                    <li><a class="dropdown-item" href="#">Deep Learning</a></li>
+                                    <li><a class="dropdown-item" href="#">Computer Vision</a></li>
+                                    <li><a class="dropdown-item" href="#">NLP</a></li>
+                                    <li><a class="dropdown-item" href="#">Reinforcement learning</a></li>
+                                
+                            </ul>
+                          </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" onclick="scrollToSection('contact')" href="#" style="color: aliceblue;">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
                 <header>
                     <nav class="navbar">
                         <h1 class="headerName">Alejandra Mariño Parra</h1>
