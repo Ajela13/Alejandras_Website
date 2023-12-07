@@ -143,4 +143,8 @@ def myWebsite(request):
 
     plotly_html = views.plotly_example(request).content.decode('utf-8')
 
-    return render(request, 'visualization.html',{'plotly_html': plotly_html})
+    return render(request, 'home.html',{'plotly_html': plotly_html})
+
+def logisticRegression(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'logistic_regression.html')

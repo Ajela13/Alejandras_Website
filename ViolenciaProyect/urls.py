@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Home/', include('ViolenciaApp.urls')),
     # path('map/', views.map),
-    path('map2/', views.map2)
-    
+    path('map2/', views.map2),
+    path('Home/logistic_regression/', views.logisticRegression, name='logistic_regression'),
+     
 ]
