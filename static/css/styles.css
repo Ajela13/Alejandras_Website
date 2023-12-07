@@ -237,9 +237,15 @@ ul li{
 .subcontent {
     border-radius: 25px;
     background: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)) ;
-    width: 25vw;
-    height: 70vh;
-    margin: 30px; 
+    width: 90%;
+    height: 90%;
+    margin: 30px;
+    overflow-y: scroll;  
+    overflow-x: hidden;  
+}
+
+.subcontent::-webkit-scrollbar{
+    display: none;
 }
 
 .carousel-item {

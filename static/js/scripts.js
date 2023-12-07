@@ -51,21 +51,5 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageButtons = document.querySelectorAll(".btn.btn-outline-secondary");
     const scrollContent = document.querySelector(".scroll-content");
   
-    imageButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const imageNumber = button.getAttribute("data-image");
-            const images = scrollContent.querySelectorAll("img");
-            
-            // Ocultar todas las imágenes
-            images.forEach((image) => {
-                image.style.display = "none";
-            });
-  
-            // Mostrar la imagen seleccionada
-            const selectedImage = scrollContent.querySelector(`[alt="Imagen ${imageNumber}"]`);
-            if (selectedImage) {
-                selectedImage.style.display = "block";
-            }
-        });
-    });
+    
   });
