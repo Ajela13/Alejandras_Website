@@ -33,12 +33,12 @@
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Machine Learning</a>
                                 <li><a class="dropdown-item" href="{% url 'logistic_regression' %}">Logistic Regression</a></li>
-                                <li><a class="dropdown-item" href="#">K-nearest neighbors</a></li>
-                                <li><a class="dropdown-item" href="#">K means clustering</a></li>
-                                <li><a class="dropdown-item" href="#">Decision trees</a></li>
-                                <li><a class="dropdown-item" href="#">Random forest</a></li>
-                                <li><a class="dropdown-item" href="#">Ada boost</a></li>
-                                <li><a class="dropdown-item" href="#">Rifge and lasso regression</a></li>
+                                <li><a class="dropdown-item" href="{% url 'k_nearest' %}">K-nearest neighbors</a></li>
+                                <li><a class="dropdown-item" href="{% url 'k_means' %}">K means clustering</a></li>
+                                <li><a class="dropdown-item" href="{% url 'decision_trees' %}">Decision trees</a></li>
+                                <li><a class="dropdown-item" href="{% url 'random_forest' %}">Random forest</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ada_boost' %}">Ada boost</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ridge_lasso_r' %}">Ridge and lasso regression</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Artificial Intelligence</a>
                                     <li><a class="dropdown-item" href="#">Deep Learning</a></li>
@@ -150,7 +150,7 @@
                         
                             <div class="image1 mb-4">
                                 <div class="image1_1 ">
-                                    <a  href="{% url 'logistic_regression' %}">    
+                                    <a  href="{% url 'project' %}">    
                                         <img
                                         src="/static/images/pie.jpg" 
                                         class="w-100 shadow-1-strong rounded "
@@ -160,7 +160,7 @@
                                     </a>
                                 </div>
                                 <div class="middle">
-                                    <a  href="{% url 'logistic_regression' %}" style="text-decoration: none;">
+                                    <a  href="{% url 'project' %}" style="text-decoration: none;">
                                     <div class="text">Logistic regression</div>
                                     </a>
                                 </div>    

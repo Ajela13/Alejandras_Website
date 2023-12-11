@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/projectstyles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div class="wrapper">
+        <div class="background"></div>
+        <div class="shadow"> 
+            <div class="navbar">
+                <h1 class="navbar-tittle justify-content-start" >{% block page_title %}Tittle{% endblock %}</h1>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: aliceblue;">Portafolio</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Machine Learning</a>
+                            <li><a class="dropdown-item" href="{% url 'logistic_regression' %}">Logistic Regression</a></li>
+                            <li><a class="dropdown-item" href="{% url 'k_nearest' %}">K-nearest neighbors</a></li>
+                            <li><a class="dropdown-item" href="{% url 'k_means' %}">K means clustering</a></li>
+                            <li><a class="dropdown-item" href="{% url 'decision_trees' %}">Decision trees</a></li>
+                            <li><a class="dropdown-item" href="{% url 'random_forest' %}">Random forest</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ada_boost' %}">Ada boost</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ridge_lasso_r' %}">Ridge and lasso regression</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Artificial Intelligence</a>
+                                <li><a class="dropdown-item" href="#">Deep Learning</a></li>
+                                <li><a class="dropdown-item" href="#">Computer Vision</a></li>
+                                <li><a class="dropdown-item" href="#">NLP</a></li>
+                                <li><a class="dropdown-item" href="#">Reinforcement learning</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home_view' %}"style="color: aliceblue;">Home</a>
+                    </li>
+                </ul>
+            </div>   
+        </div>  
+
+        <div class="introduction">
+            <div class="model ">
+                <div class="preview">
+                    {% block preview %} Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tempora ducimus repellat ab ut, iste distinctio quos unde! In earum fugit quia reiciendis animi laborum provident cum ipsam qui ipsum!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vitae ratione quis maxime quod laudantium, in possimus nulla nobis debitis ab praesentium vero, odit tempora, adipisci ad eum dignissimos corrupti!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam esse praesentium adipisci ab quae temporibus voluptas fugit officia hic? Consectetur minus nisi perspiciatis reprehenderit vel labore quod laborum doloribus.{% endblock %}
+                   
+                </div>
+            </div>
+            <div class="material">
+                <div class="data"> 
+                    Data
+                </div>
+
+                <div class="code review"> 
+                    code review
+                </div>
+                
+                <div class="graphs"> 
+                    graphs
+                </div>
+                
+                <div class="github" > 
+                    github
+                </div>
+            
+            </div>
+
+        </div>
+    </div>    
+    
+</body>
+
+</html>

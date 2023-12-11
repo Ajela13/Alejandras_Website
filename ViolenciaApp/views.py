@@ -103,10 +103,31 @@ def myWebsite(request):
 
     return render(request, 'home.html',{'plotly_html': plotly_html})
 
-def logisticRegression(request):
+def project(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'project.html')
+
+def logistic_regression(request):
     # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
     return render(request, 'logistic_regression.html')
-
+def ada_boost(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'ada_boost.html')
+def decision_trees(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'decision_trees.html')
+def k_means(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'k_means_clus.html')
+def k_nearest_n(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'k_nearest_n.html')
+def random_forest(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'random_forest.html')
+def ridge_lasso_r(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'ridge_lasso_regression.html')
 # En tu archivo views.py
 from django.urls import reverse
 

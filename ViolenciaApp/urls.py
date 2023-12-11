@@ -1,13 +1,20 @@
 from django.urls import path
 from . import views
-from .views import home_view, logisticRegression
+from .views import home_view, project, logistic_regression,ada_boost,decision_trees,k_means,k_nearest_n,random_forest,ridge_lasso_r
 
 
 #URLConf
 urlpatterns=[
     path('', views.myWebsite,name='my_website'),
     path('plotly-example/', views.plotly_example, name='plotly_example'),
-    path('Home/', home_view, name='home_view'),
-    path('logisticRegression/', logisticRegression, name='logistic_regression'),
+    path('', home_view, name='home_view'),
+    path('project/', project, name='project'),
+    path('LogisticRegression/', logistic_regression, name='logistic_regression'),
+    path('AdaBoost/', ada_boost, name='ada_boost'),
+    path('DecisionTrees/', decision_trees, name='decision_trees'),
+    path('KMeans/', k_means, name='k_means'),
+    path('KNearest/', k_nearest_n, name='k_nearest'),
+    path('RandomForest/', random_forest, name='random_forest'),
+    path('RidgeLassoRegression/', ridge_lasso_r, name='ridge_lasso_r'),
 
 ]
