@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import home_view, project, logistic_regression,ada_boost,decision_trees,k_means,k_nearest_n,random_forest,ridge_lasso_r,download_logistic_data
+from .views import home_view, project, logistic_regression,ada_boost,decision_trees,k_means,k_nearest_n,random_forest,ridge_lasso_r,download_logistic_data,download_kmeans_data
 
 
 #URLConf
@@ -16,6 +16,7 @@ urlpatterns=[
     path('KNearest/', k_nearest_n, name='k_nearest'),
     path('RandomForest/', random_forest, name='random_forest'),
     path('RidgeLassoRegression/', ridge_lasso_r, name='ridge_lasso_r'),
-    path('descargar-csv/', download_logistic_data, name='download_logistic_data'),
+    path('descargar-logistic-csv/', download_logistic_data, name='download_logistic_data'),
+    path('descargar-kmeans-csv/', download_kmeans_data, name='download_kmeans_data'),
 
 ]
