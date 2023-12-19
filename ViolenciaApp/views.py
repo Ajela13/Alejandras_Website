@@ -181,3 +181,26 @@ def download_kmeans_data(request):
 
 
 
+
+    
+def download_knearest_data(request):
+    # Ruta al archivo CSV existente
+    csv_path = os.path.join('archivos_csv', 'Mall_Customers.csv')
+
+    # Verificar si el archivo existe
+    if os.path.exists(csv_path):
+        # Abrir el archivo CSV y leer su contenido
+        with open(csv_path, 'r') as csv_file:
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = f'attachment; filename="{os.path.basename(csv_path)}"'
+            
+            # Copiar el contenido del archivo CSV a la respuesta
+            response.write(csv_file.read())
+
+        return response
+    else:
+        # Manejar el caso en que el archivo no existe
+        return HttpResponse("El archivo CSV no existe", status=404)
+
+
+
