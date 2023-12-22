@@ -42,7 +42,7 @@
             </div>   
         </div>  
 
-        <div class="introduction">
+        <header>
             <div class="model ">
                 <div class="preview">
                     {% block preview %} Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tempora ducimus repellat ab ut, iste distinctio quos unde! In earum fugit quia reiciendis animi laborum provident cum ipsam qui ipsum!
@@ -71,8 +71,60 @@
             
             </div>
 
-        </div>
-    </div>    
+        </header>
+    </div> 
+    
+    <main>
+        <section>
+            <div class="Introduction">
+                <h2>Introduction</h2>
+                <p>{% block intro %}model intro{% endblock %}</p>
+            </div> 
+
+            <div class="Overview">
+                <h2>Overview of {% block modelname %}model{% endblock %}</h2>
+                <p>Contenido de la sección principal.</p>
+            </div> 
+
+            <div class="Key">
+                <h2>Key concepts</h2>
+                <p>{% block keyconcepts %}model key concepts{% endblock %}</p>
+            </div> 
+
+            <div class="mathfoundations">
+                <h2>Mathematical foundations</h2>
+                <p>{% block mathfoundations %}model mathematical foundations{% endblock %}.</p>
+            </div> 
+            
+            <div class="training">
+                <h2>Model training</h2>
+                <p>{% block training %}model training{% endblock %}</p>
+            </div> 
+
+            <div class="Evaluation">
+                <h2>Evaluation and metrics</h2>
+                <p>{% block evaluation %}model evaluation and metrics{% endblock %}</p>
+            </div> 
+
+            <div class="regularization">
+                <h2>Regularization</h2>
+                <p>{% block regularization %}model regularization{% endblock %}</p>
+            </div> 
+
+            <div class="Case studies">
+                <h2>Case studies</h2>
+                <p>{% block cases %}Case studies{% endblock %}</p>
+            </div> 
+
+            <div class="Conclusion">
+                <h2>Conclusion</h2>
+                <p>{% block Conclusion %}model conclusions{% endblock %}</p>
+            </div> 
+        </section>
+    </main>
+
+
+    </div>
     
 </body>
 
