@@ -95,10 +95,9 @@ body, html {
   main {
     background: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5));
     margin: 10%;
-
+    border-radius: 2.5%; 
   } 
   section {
-    border-radius: 2.5%; 
     margin: 10%;
     color: aliceblue;
 }
