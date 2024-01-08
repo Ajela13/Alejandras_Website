@@ -18,7 +18,7 @@ urlpatterns=[
     path('RidgeLassoRegression/', ridge_lasso_r, name='ridge_lasso_r'),
     path('descargar-logistic-csv/', download_logistic_data, name='download_logistic_data'),
     path('descargar-kmeans-csv/', download_kmeans_data, name='download_kmeans_data'),
-    path('descargar-kmeans-csv/', download_knearest_data, name='download_knearest_data'),
-    path('descargar-kmeans-csv/', download_decisiontree_data, name='download_decisiontree_data'),
-    path('descargar-kmeans-csv/', download_randomforest_data, name='download_randomforest_data'),
+    path('descargar-knearest-csv/', download_knearest_data, name='download_knearest_data'),
+    path('descargar-decisiontree-csv/', download_decisiontree_data, name='download_decisiontree_data'),
+    path('descargar-randomforest-csv/', download_randomforest_data, name='download_randomforest_data'),
 ]
