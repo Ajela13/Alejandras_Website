@@ -1,0 +1,18 @@
+{% extends 'project.html' %}
+{% block modelname %}Lineal regression{% endblock %}
+{% block page_title %}Lineal regression {% endblock %}
+
+{% block preview %}<div class="model_type mb-4" style="font-weight: bold;"> Supervised learning model </div> 
+<li>
+    Purpose: Predicting a continuous outcome based on input features.
+</li>
+<li>
+    Function:  Utilizes a linear equation to model the relationship between input features and the target variable.
+</li> {% endblock %}
+<li>
+    Applications: Commonly used in economics, finance, and social sciences for predicting values like sales or housing prices.
+</li>
+
+{% block github %} {% endblock %}
+
+{% block cvsDataName %}{% url 'linear_regression' %}{% endblock %}

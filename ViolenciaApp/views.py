@@ -106,7 +106,9 @@ def myWebsite(request):
 def project(request):
     # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
     return render(request, 'project.html')
-
+def linear_regression(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'linear_regression.html')
 def logistic_regression(request):
     # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
     return render(request, 'logistic_regression.html')

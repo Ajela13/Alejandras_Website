@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import home_view, project, logistic_regression,ada_boost,decision_trees,k_means,k_nearest_n,random_forest,ridge_lasso_r,download_logistic_data,download_kmeans_data,download_knearest_data,download_decisiontree_data,download_randomforest_data
+from .views import home_view, project, logistic_regression,ada_boost,decision_trees,k_means,k_nearest_n,random_forest,ridge_lasso_r,download_logistic_data,download_kmeans_data,download_knearest_data,download_decisiontree_data,download_randomforest_data,linear_regression
 
 
 #URLConf
@@ -9,6 +9,7 @@ urlpatterns=[
     path('plotly-example/', views.plotly_example, name='plotly_example'),
     path('', home_view, name='home_view'),
     path('project/', project, name='project'),
+    path('LinearRegression/', linear_regression, name='linear_regression'),
     path('LogisticRegression/', logistic_regression, name='logistic_regression'),
     path('AdaBoost/', ada_boost, name='ada_boost'),
     path('DecisionTrees/', decision_trees, name='decision_trees'),
