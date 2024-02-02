@@ -140,6 +140,26 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import os
 
+def download_linear_data(request):
+    # Ruta al archivo CSV existente
+    csv_path = os.path.join('archivos_csv', 'CarPrice_Assignment_One_Var.csv')
+
+    # Verificar si el archivo existe
+    if os.path.exists(csv_path):
+        # Abrir el archivo CSV y leer su contenido
+        with open(csv_path, 'r') as csv_file:
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = f'attachment; filename="{os.path.basename(csv_path)}"'
+            
+            # Copiar el contenido del archivo CSV a la respuesta
+            response.write(csv_file.read())
+
+        return response
+    else:
+        # Manejar el caso en que el archivo no existe
+        return HttpResponse("El archivo CSV no existe", status=404)
+    
+
 def download_logistic_data(request):
     # Ruta al archivo CSV existente
     csv_path = os.path.join('archivos_csv', 'HR_Data.csv')
