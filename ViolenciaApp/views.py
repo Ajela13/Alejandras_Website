@@ -106,6 +106,9 @@ def myWebsite(request):
 def project(request):
     # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
     return render(request, 'project.html')
+def multiple_regression(request):
+    # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
+    return render(request, 'multiple_regression.html')
 def linear_regression(request):
     # Puedes personalizar esta lógica para cargar el contenido de la página nueva.
     return render(request, 'linear_regression.html')
@@ -139,6 +142,26 @@ def home_view(request):
 from django.http import HttpResponse
 from django.shortcuts import render
 import os
+
+def download_multiple_data(request):
+    # Ruta al archivo CSV existente
+    csv_path = os.path.join('archivos_csv', 'CarPrice_Assignment_Simple.csv')
+
+    # Verificar si el archivo existe
+    if os.path.exists(csv_path):
+        # Abrir el archivo CSV y leer su contenido
+        with open(csv_path, 'r') as csv_file:
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = f'attachment; filename="{os.path.basename(csv_path)}"'
+            
+            # Copiar el contenido del archivo CSV a la respuesta
+            response.write(csv_file.read())
+
+        return response
+    else:
+        # Manejar el caso en que el archivo no existe
+        return HttpResponse("El archivo CSV no existe", status=404)
+    
 
 def download_linear_data(request):
     # Ruta al archivo CSV existente

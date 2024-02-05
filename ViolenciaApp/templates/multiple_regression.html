@@ -1,0 +1,18 @@
+{% extends 'project.html' %}
+{% block modelname %}Multiple regression{% endblock %}
+{% block page_title %}Multiple regression {% endblock %}
+
+{% block preview %}<div class="model_type mb-4" style="font-weight: bold;"> Supervised learning model </div> 
+<li>
+    Purpose: Predicting a continuous outcome based on multiple input features.
+</li>
+<li>
+    Function: Extends linear regression to handle multiple independent variables.
+</li> {% endblock %}
+<li>
+    Applications: Commonly used in fields such as economics, social sciences, and business analytics to model complex relationships between multiple variables.
+</li>
+
+{% block github %}https://github.com/Ajela13/multiple-regression {% endblock %}
+
+{% block cvsDataName %}{% url 'multiple_regression' %}{% endblock %}
