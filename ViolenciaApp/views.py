@@ -268,6 +268,25 @@ def download_decisiontree_data(request):
         # Manejar el caso en que el archivo no existe
         return HttpResponse("El archivo CSV no existe", status=404)
 
+def download_ada_boost_data(request):
+    # Ruta al archivo CSV existente
+    csv_path = os.path.join('archivos_csv', 'HR_comma_sep.csv')
+
+    # Verificar si el archivo existe
+    if os.path.exists(csv_path):
+        # Abrir el archivo CSV y leer su contenido
+        with open(csv_path, 'r') as csv_file:
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = f'attachment; filename="{os.path.basename(csv_path)}"'
+            
+            # Copiar el contenido del archivo CSV a la respuesta
+            response.write(csv_file.read())
+
+        return response
+    else:
+        # Manejar el caso en que el archivo no existe
+        return HttpResponse("El archivo CSV no existe", status=404)
+
     
 def download_randomforest_data(request):
     # Ruta al archivo CSV existente
